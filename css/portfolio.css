@@ -1,3 +1,22 @@
+.navbar-menu-mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-menu-mobile {
+    display: flex;
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar-low {
+    display: flex;
+  }
+}
 /* HEADER */
 .navbar-menu ul {
   display: flex;
@@ -18,10 +37,68 @@
 }
 /* END_HEADER  */
 
+/* mobile menu */
+ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul:after {
+  display: block;
+  content: " ";
+  clear: both;
+  float: none;
+}
+ul.menu > li {
+  float: left;
+  position: relative;
+}
+ul.menu > li > a {
+  display: block;
+  padding: 10px 35px;
+  color: black;
+  background-color: #ffc000;
+  text-decoration: none;
+  border: 2px solid black;
+  font-family: "OpenSans", sans-serif;
+  font-weight: bold;
+}
+ul.menu > li > a:hover {
+  /* background-color: black; */
+}
+ul.submenu {
+  display: none;
+  position: absolute;
+  width: 120px;
+  background-color: white;
+  border: 2px solid black;
+}
+ul.submenu > li {
+  display: block;
+}
+ul.submenu > li > a {
+  display: block;
+  padding: 10px;
+  color: black;
+  background-color: #ffc000;
+  text-decoration: none;
+  font-family: "OpenSans", sans-serif;
+  font-weight: bold;
+}
+ul.submenu > li > a:hover {
+  text-decoration: underline;
+}
+ul.menu > li:hover > ul.submenu {
+  display: block;
+}
+/* end mobile */
+
 /* ---------------- */
 .ourWorks {
   display: flex;
   margin: 0 auto;
+  font-family: "Roboto Slab", serif;
 }
 .wrp-works {
   display: flex;
@@ -31,7 +108,7 @@
   font-size: 38px;
   text-transform: uppercase;
   padding: 15px 35px;
-  font-weight: 500;
+  font-weight: bold;
 }
 .ourWork1 {
   background-color: black;
@@ -64,13 +141,14 @@
   border: 1px solid #999999;
   text-decoration: none;
   font-weight: 500;
+  font-family: "Open Sans", sans-serif;
 }
 .nav-menu-all li > a:hover,
 .nav-menu-all li > a:focus {
   border-color: #ffc000;
   color: #ffc000;
 }
-/*  NED NAV */
+/*  END NAV */
 
 /* PORTFOLIO */
 .portfolio {
@@ -78,6 +156,13 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+  .portfolio {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .bgi1 {
   background: url("../img/img1.png") center/cover;
@@ -108,6 +193,7 @@
   height: 100%;
   margin: 1% 0;
 }
+
 .element-item {
   display: block;
   position: relative;
@@ -139,7 +225,7 @@
 }
 .element-item__title {
   opacity: 0;
-  font-size: 3em;
+  font-size: 25px;
   color: #3b3b3b;
   margin-top: 15px;
   margin-left: 15px;
@@ -148,8 +234,9 @@
   left: 35%;
   transition: all 1s ease;
   font-style: 38px;
-  font-weight: 500;
+  font-weight: bold;
   text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
 }
 .element-item:hover .element-item__title {
   opacity: 1;
@@ -165,14 +252,13 @@
 
 .more > a {
   display: block;
-  width: 22%;
   font-size: 18px;
   color: #000;
   border: 2px solid #000;
   border-radius: 5px;
   padding: 20px 50px;
   margin: 55px auto;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
 }
 .more > a:hover {
@@ -190,8 +276,21 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 992px) {
+  .ftr_head,
+  .navbar-low,
+  .navbar-low > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-low ul > li {
+    margin: 1em;
+  }
+}
 .wt {
   color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 .wt:hover {
   color: white;
@@ -201,8 +300,10 @@
   font-size: 15px;
   border: 2px solid white;
   border-radius: 5px;
-  padding: 20px 50px;
+  /* padding: 20px 50px; */
   text-decoration: none;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
 }
 .ftr_head > a:hover {
   background-color: #ffc000;
@@ -223,6 +324,12 @@
   display: flex;
   width: 70%;
   margin-right: 10%;
+  font-family: "Roboto Slab", serif;
+}
+@media (max-width: 992px) {
+  .loc {
+    flex-direction: column;
+  }
 }
 .street,
 .tlf,
@@ -237,6 +344,9 @@
   text-align: center;
   color: black;
   background-color: #ffc000;
+}
+.icon > a {
+  color: black;
 }
 .social {
   width: 20%;

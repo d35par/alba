@@ -19,6 +19,7 @@ ul {
 .navbar-menu ul > li {
   margin: 0 0.75em;
 }
+
 /*BUTTONS*/
 
 .btn-sec,
@@ -156,6 +157,7 @@ ul {
 
 .alba-phone {
   font-weight: 500;
+  font-family: "Roboto Slab", serif;
 }
 
 .advantage {
