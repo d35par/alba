@@ -248,7 +248,8 @@ a:hover {
 .main-item {
   width: 49%;
   height: 100%;
-  margin: 0.35% 0;
+  margin: 1.35% 0;
+  overflow: hidden;
 }
 @media (max-width: 992px) {
   .main-item {
@@ -262,7 +263,9 @@ a:hover {
   width: 100%;
   background-color: aliceblue;
   transform-style: preserve-3d;
-  margin: 1% 0;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
 }
 
 .element-item__bg {
@@ -291,7 +294,7 @@ a:hover {
   margin-left: 15px;
   position: absolute;
   top: 50%;
-  left: 35%;
+  left: 38%;
   transition: all 1s ease;
   font-style: 38px;
   font-weight: bold;
@@ -305,6 +308,11 @@ a:hover {
 }
 .element-item:hover .element-item__overlay {
   opacity: 1;
+}
+.element-item:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 /* END PORTFOLIO */
 
