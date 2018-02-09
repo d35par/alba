@@ -205,6 +205,41 @@ a:hover {
   border-color: black;
   color: black;
 }
+.button-Mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .nav-menu-all {
+    display: none;
+  }
+  .button-Mobile {
+    display: block;
+    margin-top: 5em;
+  }
+  .dropdown-menu {
+    min-width: 7rem;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+  }
+  .btn-secondary {
+    background-color: #fff;
+    color: #000;
+  }
+  .btn-secondary:hover,
+  .btn-secondary:not(:disabled):not(.disabled).active,
+  .btn-secondary:not(:disabled):not(.disabled):active,
+  .show > .btn-secondary.dropdown-toggle {
+    color: #000;
+    background-color: #fff;
+  }
+  .dropdown-item,
+  .btn-secondary {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+  }
+}
 /*  END NAV */
 
 /* PORTFOLIO */
