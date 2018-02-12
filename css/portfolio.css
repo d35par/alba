@@ -283,7 +283,7 @@ a:hover {
 .main-item {
   width: 49%;
   height: 100%;
-  margin: 1.35% 0;
+  margin: 1% 0;
   overflow: hidden;
 }
 @media (max-width: 992px) {
